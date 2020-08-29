@@ -1,16 +1,9 @@
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 10vh;
-    background: lightblue;
+.navbar-logo{
     color: white;
+    font-weight: 900;
+    font-size: larger;
 }
 
-.navbar-links{
-    width: 40%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
+Nav.Link{
+    color: azure;
 }

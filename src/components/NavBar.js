@@ -1,37 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MdFingerprint } from "react-icons/md";
-import './NavBar.css';
+import "./NavBar.css";
+import { Navbar, Nav } from "react-bootstrap";
 
-function NavBar() {
+function navBar() {
   return (
     <>
-      <nav className="navbar">
+      <Navbar bg="dark" variant="dark" className='nav-bar'>
+        <Navbar.Brand>
           <Link to="/" className="navbar-logo">
-            <MdFingerprint className="navbar-icon" />
             Gowtham
           </Link>
-
-          <ul className="navbar-links">
-            <li>
-              <Link to="/about" >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/services" >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" >
-                Contact
-              </Link>
-            </li>
-          </ul>
-      </nav>
+        </Navbar.Brand>
+        <Nav className="mr-auto">
+          <Nav.Link>
+            <Link to="/about">About</Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link to="/services">Services</Link>
+          </Nav.Link>
+          <Nav.Link>
+            <Link to="/contact">Contact</Link>
+          </Nav.Link>
+        </Nav>
+      </Navbar>
     </>
   );
 }
 
-export default NavBar;
+export default navBar;

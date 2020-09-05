@@ -33,7 +33,7 @@ export default function NavBar() {
                     className="nav-link"
                     to="/about"
                   >
-                    About
+                    About Me
                   </NavLink>
                 </li>
                 <li className="nav-item">
@@ -49,9 +49,18 @@ export default function NavBar() {
                   <NavLink
                     activeClassName="menu_active"
                     className="nav-link"
+                    to="/home"
+                  >
+                    Sessions
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    activeClassName="menu_active"
+                    className="nav-link"
                     to="/contact"
                   >
-                    Contact
+                    Contact Me
                   </NavLink>
                 </li>
                 {/* ToDo: Add booking button here */}

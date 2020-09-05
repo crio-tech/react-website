@@ -1,31 +1,65 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./NavBar.css";
-import { Navbar, Nav } from "react-bootstrap";
 
-function navBar() {
+export default function NavBar() {
   return (
-    <>
-      <Navbar bg="dark" variant="dark" className='nav-bar'>
-        <Navbar.Brand>
-          <Link to="/" className="navbar-logo">
-            Gowtham
-          </Link>
-        </Navbar.Brand>
-        <Nav className="mr-auto">
-          <Nav.Link>
-            <Link to="/about">About</Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link to="/services">Services</Link>
-          </Nav.Link>
-          <Nav.Link>
-            <Link to="/contact">Contact</Link>
-          </Nav.Link>
-        </Nav>
-      </Navbar>
-    </>
+    <div className="container-fluid nav_bg">
+      <div className="row">
+        <div className="col-10 mx-auto">
+          <nav className="navbar navbar-expand-lg navbar-light ">
+            <NavLink className="navbar-brand" to="/">
+              Gowtham
+            </NavLink>
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav ml-auto ">
+                <li className="nav-item">
+                  <NavLink
+                    activeClassName="menu_active"
+                    className="nav-link"
+                    to="/about"
+                  >
+                    About
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    activeClassName="menu_active"
+                    className="nav-link"
+                    to="/blog"
+                  >
+                    Blog
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink
+                    activeClassName="menu_active"
+                    className="nav-link"
+                    to="/contact"
+                  >
+                    Contact
+                  </NavLink>
+                </li>
+                {/* ToDo: Add booking button here */}
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
   );
 }
-
-export default navBar;

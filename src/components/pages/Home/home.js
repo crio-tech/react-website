@@ -5,21 +5,24 @@ import {
   Container,
   Typography,
   Card,
-  CardMedia,
   CardContent,
   CardHeader,
   Avatar,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
+import Image from '../../../img/bg-image3.jpg';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
   },
   paper: {
-    padding: theme.spacing(2),
     textAlign: "center",
-    color: theme.palette.text.secondary,
+    color:'white',
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+    background: `url(${Image})`
   },
   heroContent: {
     padding: theme.spacing(18, 0, 15),
@@ -53,7 +56,7 @@ export default function Home() {
         <Grid container spacing={1} direction="column">
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={12} sm={6}>
-              <Container
+              {/* <Container
                 maxWidth="sm"
                 component="main"
                 className={classes.heroContent}
@@ -67,7 +70,7 @@ export default function Home() {
                 >
                   Welcome
                 </Typography>
-              </Container>
+              </Container> */}
             </Grid>
             <Grid item xs={12} sm={6}>
               <Container
@@ -136,63 +139,46 @@ export default function Home() {
               </Container>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Container
-                maxWidth="sm"
-                component="main"
-                className={classes.heroContent}
-              >
-                <Typography
-                  component="h1"
-                  variant="h2"
-                  align="center"
-                  color="textPrimary"
-                  gutterBottom
-                >
-                  Welcome
-                </Typography>
-              </Container>
             </Grid>
           </Grid>
-          <Container className={classes.cardGrid} maxWidth="md">
-            <Typography
-              component="h2"
-              variant="h3"
-              align="center"
-              color="textPrimary"
-              gutterBottom
-            >
-              TESTIMONIALs
-            </Typography>
-            <Grid container spacing={4}>
-              {cards.map((card) => (
-                <Grid item key={card} xs={12} sm={6} md={4}>
-                  <Card className={classes.card}>
-                    <CardContent className={classes.cardContent}>
-                      <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
-                      </Typography>
-                    </CardContent>
-                    <CardHeader
-                      avatar={
-                        <Avatar aria-label="recipe" className={classes.avatar}>
-                          R
-                        </Avatar>
-                      }
-                      title="Jhon Wick"
-                      subheader="Designer"
-                    />
-                    <CardMedia
-                      className={classes.media}
-                      image="/static/images/cards/paella.jpg"
-                      title="Paella dish"
-                    />
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </Container>
+          <Paper variant="outlined" className={classes.paper}>
+            <Container className={classes.cardGrid} maxWidth="md">
+              <Typography
+                variant="h3"
+                color="inherit"
+                gutterBottom
+              >
+                TESTIMONIALS
+              </Typography>
+              <Grid container spacing={4}>
+                {cards.map((card) => (
+                  <Grid item key={card} xs={12} sm={6} md={4}>
+                    <Card className={classes.card}>
+                      <CardContent className={classes.cardContent}>
+                        <Typography>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit, sed do eiusmod tempor incididunt ut labore et
+                          dolore magna aliqua.
+                        </Typography>
+                      </CardContent>
+                      <CardHeader
+                        avatar={
+                          <Avatar
+                            aria-label="recipe"
+                            className={classes.avatar}
+                          >
+                            R
+                          </Avatar>
+                        }
+                        title="Jhon Wick"
+                        subheader="Designer"
+                      />
+                    </Card>
+                  </Grid>
+                ))}
+              </Grid>
+            </Container>
+          </Paper>
         </Grid>
       </div>
     </>

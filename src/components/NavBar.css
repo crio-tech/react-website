@@ -1,0 +1,10 @@
+.navbar-brand{
+    color: black;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.menu_active{
+    font-size: bold;
+    border-bottom: 1px solid #565665
+}

@@ -1,11 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
-import Footer from './components/Footer';
-import home from './components/pages/Home/home';
-import about from './components/pages/About/about';
-import services from './components/pages/Services/services';
-import contact from './components/pages/Contact/contact';
+import Navbar from './components/NavBar';
+import home from './components/pages/Home';
+import about from './components/pages/About';
+import blog from './components/pages/Blog';
+import contact from './components/pages/Contact';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
     <Switch>
       <Route path='/' exact component={home}/>
       <Route path='/about' component={about}/>
-      <Route path='/services' component={services}/>
+      <Route path='/blog' component={blog}/>
       <Route path='/contact' component={contact}/>
     </Switch>
     <Footer/>

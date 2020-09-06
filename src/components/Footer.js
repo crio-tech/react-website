@@ -16,7 +16,7 @@ function Footer() {
     <div className='footer-container'>
       <section className='footer-subscription'>
         <p className='footer-subscription-heading'>
-          Know more about ehat I do.
+          Know more about what I do.
         </p>
         <p className='footer-subscription-text'>
           Ask a enquiry.

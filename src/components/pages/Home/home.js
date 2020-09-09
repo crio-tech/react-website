@@ -12,6 +12,9 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import { red } from "@material-ui/core/colors";
 import Image from '../../../img/bg-image3.jpg';
+import hero from '../../../img/hero.png'
+import bg from '../../../img/gowtham.png'
+import './home.css';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -54,23 +57,10 @@ export default function Home() {
     <>
       <div className={classes.root}>
         <Grid container spacing={1} direction="column">
+          {/* Hero section */}
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={12} sm={6}>
-              {/* <Container
-                maxWidth="sm"
-                component="main"
-                className={classes.heroContent}
-              >
-                <Typography
-                  component="h1"
-                  variant="h2"
-                  align="center"
-                  color="textPrimary"
-                  gutterBottom
-                >
-                  Welcome
-                </Typography>
-              </Container> */}
+              <img src={hero} className="hero-img"></img>
             </Grid>
             <Grid item xs={12} sm={6}>
               <Container
@@ -105,6 +95,7 @@ export default function Home() {
               </Container>
             </Grid>
           </Grid>
+          {/* About section */}
           <Grid container item xs={12} spacing={3}>
             <Grid item xs={12} sm={6}>
               <Container
@@ -139,8 +130,10 @@ export default function Home() {
               </Container>
             </Grid>
             <Grid item xs={12} sm={6}>
+              <img src={bg} className="bg-img"></img>
             </Grid>
           </Grid>
+          {/* Testimonial section */}
           <Paper variant="outlined" className={classes.paper}>
             <Container className={classes.cardGrid} maxWidth="md">
               <Typography

@@ -33,7 +33,7 @@ export default function NavBar() {
                     className="nav-link"
                     to="/about"
                   >
-                    About Me
+                    Meet Gowtham
                   </NavLink>
                 </li>
                 <li className="nav-item">
